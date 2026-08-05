@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Get Account">
+        <lightning-input label='Enter Account Name' onchange={handleChange}></lightning-input>
+        <!-- <lightning-button variant="Brand" label="Get Account" onclick={accHandler}></lightning-button> -->
+        <template lwc:if={len}>
+            <lightning-datatable data={accData} columns={columns} key-field="Id" onrowselection={getSelectedName}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

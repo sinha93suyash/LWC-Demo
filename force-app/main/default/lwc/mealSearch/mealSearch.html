@@ -1,0 +1,30 @@
+<template>
+    <div class="hero-section">
+
+        <div class="overlay">
+
+            <h1 class="hero-heading">
+                Tech Journey with Suyash
+            </h1>
+
+            <div class="search-box">
+
+                <lightning-input
+                    type="text"
+                    variant="label-hidden"
+                    placeholder="Search Meal..."
+                    onchange={changeHandler}>
+                </lightning-input>
+
+                <lightning-button
+                    variant="brand"
+                    label="Search Meal"
+                    onclick={handleClick}>
+                </lightning-button>
+
+            </div>
+
+        </div>
+
+    </div>
+</template>

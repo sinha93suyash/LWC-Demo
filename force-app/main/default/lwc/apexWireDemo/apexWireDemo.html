@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Apex demo">
+        <template if:true = {accounts.data}>
+            <template for:each={accounts.data} for:item="account">
+                <div key={account.id}>
+                    <p>Name: {account.Name}</p>
+                    <p>Industry: {account.Industry}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

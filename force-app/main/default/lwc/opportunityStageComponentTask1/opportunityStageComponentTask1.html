@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Project 1">
+        <lightning-combobox name="Opportunity" label="Stage Picklist" value={selectedStage} placeholder="Select Stage"
+            options={StageOptions} onchange={handleChange}></lightning-combobox>
+        <div class="slds-p-around_medium"> <lightning-input type="checkbox" label="Close Date"
+                onchange={handleCheckbox}>
+            </lightning-input>
+        </div>
+        <div class = "slds-p-around_small">
+            <template if:true={opportunities.data}>
+                <lightning-datatable
+                key-field="id"
+                data={opportunities.data}
+                columns={columns}
+                sorted-by={sortBy}
+                sorted-direction={sortDirection}
+                onsort={handleSort}>
+        </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

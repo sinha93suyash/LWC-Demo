@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Wire with Parameters">
+
+        <lightning-input 
+            type="text"
+            label="Enter Account Name"
+            onkeyup={handleChange}>
+        </lightning-input>
+
+        <template if:true={accounts.length}>
+            <p>if true is true so coming inside this</p>
+            <template for:each={accounts} for:item="acc">
+
+                <div key={acc.Id}>
+                    Account Name: {acc.Name}
+                </div>
+                    
+            </template>
+        </template>
+
+    </lightning-card>
+</template>

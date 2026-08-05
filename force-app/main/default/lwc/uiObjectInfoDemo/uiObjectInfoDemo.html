@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="UiObject Info Demo" >
+        <div>
+            <template if:true={objectInfoHandler.data}>
+                api Name: {objectInfoHandler.data.apiName}
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="UiObjectInfos Demo" >
+        <div>
+            <template if:true={ObjectInfos}>
+                
+                <template for:each={ObjectInfos.results} for:item="obj">
+                    <div key={obj.result.apiName}>
+                        <div>object API Name is: {obj.result.apiName}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div>
+            hello world!!
+        </div>
+    </lightning-card>
+</template>

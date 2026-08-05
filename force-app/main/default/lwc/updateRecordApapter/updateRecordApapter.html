@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title = 'Fetch contact record'>
+        <div style="height: 300px;">
+        <lightning-datatable
+                 key-field="id"
+                data={contacts}
+                onsave={handleSave}
+                draft-values={draftValues}
+                columns={columns}>
+        </lightning-datatable>
+    </div>
+    </lightning-card>
+</template>

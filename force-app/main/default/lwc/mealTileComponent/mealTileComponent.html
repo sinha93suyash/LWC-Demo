@@ -1,0 +1,18 @@
+<template>
+    <div class="meal-card">
+
+        <img src={meal.strMealThumb} alt="Meal Image">
+
+        <div class="meal-name">
+            <h2>{meal.strMeal}</h2>
+            <p>{meal.strArea} - {meal.strCategory}</p>
+        </div>
+
+        <div class="meal-button">
+            <button class="red-button" onclick={handleClick}>
+                Recipe
+            </button>
+        </div>
+
+    </div>
+</template>

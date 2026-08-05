@@ -1,0 +1,8 @@
+<template>
+    <lightning-input label='Enter Product Name' onchange={productHandler}></lightning-input>
+    <template lwc:if={prodData}>
+        <lightning-datatable data={prodData} columns={columns} key-field="Id" onrowaction={getSelectedProductId}></lightning-datatable>
+    </template>
+    
+    
+</template>

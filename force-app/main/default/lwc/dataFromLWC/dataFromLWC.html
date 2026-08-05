@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Data from LWC to apex">
+        <lightning-record-edit-form object-api-name={objectApiName} onsubmit={handleSubmit}>
+            <lightning-input-field field-name={nameField}> </lightning-input-field>
+            <div class="slds-var-m-top_medium">
+                <lightning-button variant="brand" type="submit" label="Save">
+                </lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

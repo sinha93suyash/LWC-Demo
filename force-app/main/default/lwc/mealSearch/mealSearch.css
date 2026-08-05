@@ -1,0 +1,42 @@
+.hero-section {
+
+    background-image: url('/resource/Meal'); /* or use your static resource */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 450px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+
+    text-align: center;
+    width: 100%;
+}
+
+.hero-heading {
+
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+.search-box {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.search-box lightning-input {
+
+    width: 450px;
+}

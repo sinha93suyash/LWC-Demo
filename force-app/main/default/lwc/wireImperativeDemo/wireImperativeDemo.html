@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = 'wire Imperative'>
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="acc">
+                <div key={acc.id}>
+                    Account Name: {acc.Name}
+                    Account Industry: {acc.Industry}
+                </div>
+            </template>
+        </template>
+        <lightning-button label="Get Account List" variant="Brand" onclick={handleChange}>
+
+        </lightning-button>
+    </lightning-card>
+</template>

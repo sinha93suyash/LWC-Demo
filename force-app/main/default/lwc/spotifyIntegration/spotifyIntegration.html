@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Spotify Integration">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-around_left">
+                <lightning-input type="text" label="Search" value={searchKey} onchange={handleChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-align-bottom">
+                <lightning-button label="Search" variant="brand" onclick={handleSearch}>
+                </lightning-button>
+            </div>
+        </div>
+        <template if:true={displayResult}>
+            <div class="Album-container">
+                <div class="Album Image">
+                    <img src={trackUrl} alt="Aalas ka ped"></img>
+                </div>
+                <div class="Track Details">
+
+                    <p>Artist Name: {ArtistName}</p>
+                    <a href={data.album.external_urls.spotify} target="_blank">
+                        <p><strong>Album: {data.album.name}</strong></p>
+                    </a>
+                    <p>Release Date: {data.album.release_date} </p>
+                </div>
+            </div>
+                
+        </template>
+    </lightning-card>
+</template>

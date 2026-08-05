@@ -1,0 +1,16 @@
+<template>
+    <lightning-tabset>
+        <lightning-tab label="Account and Product Search">
+            <c-get-account onaccountselected={selectedAccHandler}></c-get-account>
+            <c-product-search onproductselect={selectedProdHandler}></c-product-search>
+            <template lwc:if={selectedProducts.length}>
+                <lightning-datatable data={selectedProducts} columns={columns} key-field="ProductName" onrowaction={deleteHandler}>
+                </lightning-datatable>  
+            </template>
+                <lightning-button label="Save" variant="Brand" onclick={addHandler}></lightning-button>
+        </lightning-tab>
+        <lightning-tab label="Selected Products">
+        </lightning-tab>
+    </lightning-tabset>
+
+</template>
