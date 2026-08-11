@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Pagination Demo">
+        <lightning-button label="Get Account" variant="Brand" onclick={getAccountHandler}></lightning-button>
+        <lightning-datatable key-field="Id" columns={columns} data={displayRecords}></lightning-datatable>
+        
+            <lightning-button label="Previous" variant="Brand" onclick={previousHandler} disabled={isPreviousDisabled}></lightning-button>
+            <lightning-button label="Next" variant="Brand" onclick={nextHandler}></lightning-button>
+        
+        
+    </lightning-card>
+</template>
